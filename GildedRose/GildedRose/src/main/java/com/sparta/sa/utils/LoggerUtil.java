@@ -9,16 +9,16 @@ public class LoggerUtil {
     public static void setup(Logger logger) throws IOException {
         logger.setUseParentHandlers(false);
         // logger level
-        logger.setLevel(Level.ALL);
+        logger.setLevel(Level.OFF);
 
          // console handler
         ConsoleHandler consoleHandler = new ConsoleHandler();
-        consoleHandler.setLevel(Level.FINE);
+        consoleHandler.setLevel(Level.OFF);
         consoleHandler.setFormatter(new CustomFormatter());
         logger.addHandler(consoleHandler);
         // file handler
         FileHandler fileHandler = new FileHandler("src/main/resources/logFile.log",true);
-        fileHandler.setLevel(Level.ALL);
+        fileHandler.setLevel(Level.OFF);
         fileHandler.setFormatter(new XMLFormatter());
         logger.addHandler(fileHandler);
 

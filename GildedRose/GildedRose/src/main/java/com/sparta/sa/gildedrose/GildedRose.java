@@ -61,14 +61,14 @@ class GildedRose {
                 }
             }
           // handle quality degradation for expired items
-            if (items[i].sellIn < 0) {
+            if (items[i].sellIn <= 0) {
                 LOGGER.info("Item has expired");
 
                 if (!items[i].name.equals("Aged Brie")) {
                     if (!items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                         if (items[i].quality > 0) {
                             if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-                                LOGGER.info("Quality decreases by 1 (should be 2)");
+                                LOGGER.info("Quality decreases by 1 ");
                                 items[i].quality = items[i].quality - 1;
                             }
                         }
