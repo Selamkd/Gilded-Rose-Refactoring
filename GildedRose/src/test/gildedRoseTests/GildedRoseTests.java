@@ -1,10 +1,12 @@
-package com.sparta.sa.gildedrose;
-
+package gildedRoseTests;
+import com.sparta.sa.gildedrose.GildedRose;
+import   com.sparta.sa.gildedrose.GildedRose;
+import   com.sparta.sa.gildedrose.Item;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+//import org.junit.jupiter.params.ParameterizedTest;
+//import org.junit.jupiter.params.provider.ValueSource;
 
 public class GildedRoseTests {
     @Test
@@ -66,8 +68,8 @@ public class GildedRoseTests {
      Assertions.assertEquals(8, agedBrie.sellIn);
 
  }
- 
- 
+
+
  @Test
  @DisplayName("Check that the quality of an item never exceeds more than 50")
  void checkThatTheQualityOfAnItemNeverExceedsMoreThan50() {
@@ -85,7 +87,7 @@ public class GildedRoseTests {
 
 
  }
- 
+
  @Test
  @DisplayName("Check that Sulfuras quality is 80")
  void checkThatSulfurasQualityIs80() {
@@ -94,7 +96,7 @@ public class GildedRoseTests {
      GildedRose gildedRose = new GildedRose(new Item[]{sulfuras});
      // Assert
      Assertions.assertEquals(80, sulfuras.quality);
-     
+
  }
 
 
@@ -110,8 +112,8 @@ public class GildedRoseTests {
      gildedRose.updateQuality();
      // Assert
      Assertions.assertEquals(80, sulfuras.quality);
-     
-     
+
+
  }
 
  @Test
@@ -143,7 +145,7 @@ public class GildedRoseTests {
      Assertions.assertEquals(21, backstagePass.quality);
  }
 
-// test with 10 is failing issue with logic? or test?
+//@Disabled
 // @Test
 // @DisplayName("Given sell in date is 10 quality increments by 2")
 // void givenSellInDateIs10QualityIncrementsBy2() {
@@ -173,7 +175,7 @@ public class GildedRoseTests {
         Assertions.assertEquals(23, backstagePass.quality);
 
     }
-// test with 5 is failing. both for 10 and 5.
+//    @Disabled
 //    @Test
 //    @DisplayName("Given sell in date backstage pass is 5 quality increments by 3")
 //    void givenSellInDateBackstagePassIs5QualityIncrementsBy3() {

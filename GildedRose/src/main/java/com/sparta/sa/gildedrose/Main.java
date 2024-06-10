@@ -1,4 +1,4 @@
-package com.sparta.sa.gildedrose;
+package main.java.com.sparta.sa.gildedrose;
 
 import com.sparta.sa.utils.LoggerUtil;
 
@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Hello world!");
         try {
             // Call setup method here
-            LoggerUtil.setup(Logger.getLogger(GildedRose.class.getName()));
+            LoggerUtil.setup(Logger.getLogger(com.sparta.sa.gildedrose.GildedRose.class.getName()));
         } catch (IOException e) {
             e.printStackTrace();
         }
