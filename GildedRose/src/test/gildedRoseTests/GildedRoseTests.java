@@ -175,7 +175,7 @@ public class GildedRoseTests {
     // Assert
     Assertions.assertEquals("Backstage passes to a TAFKAL80ETC concert", backstagePass.name);
     Assertions.assertEquals(10, backstagePass.sellIn);
-    Assertions.assertEquals(22, backstagePass.quality);
+    Assertions.assertEquals(23, backstagePass.quality);
 
   }
 
