@@ -18,7 +18,7 @@ public class LoggerUtil {
     public static void  setUp() {
         LOGGER.setUseParentHandlers(false);
         LOGGER.addHandler(getConsoleHandler());
-//        LOGGER.addHandler(getFileHandler());
+        LOGGER.addHandler(getFileHandler());
         LOGGER.setLevel(Level.FINE);
         LOGGER.info("Setting up Logger...");
     }
@@ -32,7 +32,7 @@ public class LoggerUtil {
 
     private static FileHandler getFileHandler(){
         try {
-            FileHandler fileHandler = new FileHandler("src/main/resources/logfile.log");
+            FileHandler fileHandler = new FileHandler("GildedRose/src/main/resources/logfile.log");
             fileHandler.setLevel(Level.ALL);
             fileHandler.setFormatter(new FileFormatter());
             return fileHandler;
